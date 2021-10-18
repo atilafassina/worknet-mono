@@ -28,6 +28,14 @@ const Home: NextPage = () => {
                   get started
                 </a>
               </Link>
+              <button
+                type="button"
+                onClick={() => {
+                  throw new Error('Sentry Frontend Error')
+                }}
+              >
+                Throw error
+              </button>
             </div>
           </div>
         </div>
