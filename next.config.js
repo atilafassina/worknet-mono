@@ -6,17 +6,12 @@ const securityHeaders = [
     value: 'max-age=63072000; includeSubDomains; preload',
   },
   {
-    key: 'Strict-Transport-Security',
-    value: 'max-age=63072000; includeSubDomains; preload',
-  },
-  {
     key: 'X-Content-Type-Options',
     value: 'nosniff',
   },
   {
-    key: 'Content-Security-Policy-Report-Only',
-    value:
-      "default-src 'self'; script-src 'unsafe-eval' 'self'; connect-src 'self'; style-src 'unsafe-inline' 'self'; object-src 'none'; img-src * data:; frame-ancestors 'self'; child-src 'self'; frame-src 'self'; base-uri 'self'; form-action 'self';",
+    key: 'Content-Security-Policy',
+    value: require('./utils/csp'),
   },
 ]
 
@@ -39,7 +34,10 @@ const nextConfig = {
   async headers() {
     return [
       {
-        // Apply these headers to all routes in your application.
+        source: '/',
+        headers: securityHeaders,
+      },
+      {
         source: '/(.*)',
         headers: securityHeaders,
       },
