@@ -15,7 +15,8 @@ const securityHeaders = [
   },
   {
     key: 'Content-Security-Policy-Report-Only',
-    value: require('./utils/csp'),
+    value:
+      "default-src 'self'; script-src 'unsafe-eval' 'self'; connect-src 'self'; style-src 'unsafe-inline' 'self'; object-src 'none'; img-src * data:; frame-ancestors 'self'; child-src 'self'; frame-src 'self'; base-uri 'self'; form-action 'self';",
   },
 ]
 
