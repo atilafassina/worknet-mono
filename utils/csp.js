@@ -1,20 +1,13 @@
-const {
-  getCSP,
-  SELF,
-  NONE,
-  UNSAFE_INLINE,
-  DATA,
-  UNSAFE_EVAL,
-} = require('csp-header')
+const { getCSP, SELF, NONE, UNSAFE_INLINE, DATA } = require('csp-header')
 
 const sentryPreset = {
-  // 'connect-src': ['sentry.io'],
+  'connect-src': ['o1043271.ingest.sentry.io'],
   'report-uri': process.env.SENTRY_CSP_REPORT_URI,
 }
 
 const sitePreset = {
   'default-src': [SELF],
-  'script-src': [UNSAFE_EVAL, SELF],
+  'script-src': [UNSAFE_INLINE, SELF],
   'connect-src': [SELF],
   'style-src': [UNSAFE_INLINE, SELF],
   'object-src': [NONE],
