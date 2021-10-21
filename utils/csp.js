@@ -7,6 +7,11 @@ const {
   UNSAFE_EVAL,
 } = require('csp-header')
 
+const sentryPreset = {
+  // 'connect-src': ['sentry.io'],
+  'report-uri': process.env.SENTRY_CSP_REPORT_URI,
+}
+
 const sitePreset = {
   'default-src': [SELF],
   'script-src': [UNSAFE_EVAL, SELF],
@@ -19,13 +24,8 @@ const sitePreset = {
   'frame-src': [SELF],
   'base-uri': [SELF],
   'form-action': [SELF],
-  /**
-   * @todo
-   * fix 404 on report-csp
-   */
-  'report-uri': '/api/report-csp',
 }
 
 module.exports = getCSP({
-  presets: [sitePreset],
+  presets: [sitePreset, sentryPreset],
 })
