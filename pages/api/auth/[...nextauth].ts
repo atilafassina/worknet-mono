@@ -9,26 +9,26 @@ export default NextAuth({
     }),
   ],
 
-  // callbacks: {
-  //   async jwt({ token, account }) {
-  //     if (account) {
-  //       token.accessToken = account.access_token
-  //     }
+  callbacks: {
+    async jwt({ token, account }) {
+      if (account) {
+        token.accessToken = account.access_token
+      }
 
-  //     return token
-  //   },
-  //   async session({ session, token }) {
-  //     const access = `token ${token.accessToken}`
-  //     const profileResponse = await fetch('https://api.github.com/user', {
-  //       headers: {
-  //         Authorization: access,
-  //       },
-  //     })
+      return token
+    },
+    async session({ session, token }) {
+      const access = `token ${token.accessToken}`
+      const profileResponse = await fetch('https://api.github.com/user', {
+        headers: {
+          Authorization: access,
+        },
+      })
 
-  //     const user = await profileResponse.json()
-  //     session.user = user
+      const user = await profileResponse.json()
+      session.user = user
 
-  //     return session
-  //   },
-  // },
+      return session
+    },
+  },
 })
