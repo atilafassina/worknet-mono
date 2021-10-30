@@ -1,4 +1,5 @@
 const { withSentryConfig } = require('@sentry/nextjs')
+const { SOCIAL_URL } = process.env
 
 const securityHeaders = [
   {
@@ -57,6 +58,22 @@ const nextConfig = {
       {
         source: '/(.*)',
         headers: securityHeaders,
+      },
+    ]
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/api/auth/:path*',
+        destination: `${SOCIAL_URL}/api/auth:path*`,
+      },
+      {
+        source: '/getting-started',
+        destination: SOCIAL_URL,
+      },
+      {
+        source: '/getting-started/:path*',
+        destination: `${SOCIAL_URL}/:path*`,
       },
     ]
   },

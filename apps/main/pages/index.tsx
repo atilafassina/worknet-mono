@@ -31,11 +31,12 @@ const Home = ({
               </a>
             </Link>
             <div className="py-8 w-full grid place-items-center sm:text-3xl">
-              <Link href="/get-started">
-                <a className="block px-6 py-3 border-2 border-purple-300 rounded-md text-purple-300 animate-pulse font-mono !no-underline hover:bg-purple-300 hover:text-black focus:bg-purple-300 focus:text-black">
-                  get started
-                </a>
-              </Link>
+              <a
+                href="/get-started"
+                className="block px-6 py-3 border-2 border-purple-300 rounded-md text-purple-300 animate-pulse font-mono !no-underline hover:bg-purple-300 hover:text-black focus:bg-purple-300 focus:text-black"
+              >
+                get started
+              </a>
             </div>
           </div>
         </div>
