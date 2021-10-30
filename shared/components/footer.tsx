@@ -1,5 +1,4 @@
-// import styles from '@styles/footer.module.css'
-import { AtilaIO } from '@components/atila-logo'
+import { AtilaIO } from './atila-logo'
 
 export default function Footer() {
   return (
@@ -56,7 +55,7 @@ export default function Footer() {
             </li>
           </ul>
         </section>
-        <a href="https://atila.io" className="sm:col-span-3 mt-10">
+        <a href="https://atila.io" className="sm:col-span-3 mt-10 w-40 block">
           <AtilaIO />
         </a>
       </div>

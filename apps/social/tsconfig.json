@@ -1,0 +1,24 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@shared/*": ["../../shared/*"],
+      "@layouts/*": ["layouts/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "scripts/dictionary-builder.js",
+    "utils/csp.js",
+    "tests/csp.test.js",
+    "../../shared/components/atila-logo.tsx",
+    "../../shared/components/footer.tsx",
+    "components/loading.tsx"
+  ]
+}

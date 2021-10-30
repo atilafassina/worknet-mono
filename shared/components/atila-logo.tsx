@@ -1,6 +1,9 @@
 export const AtilaIO = () => (
   <svg
-    className="w-40"
+    style={{
+      width: '100%',
+      maxWidth: '200px',
+    }}
     viewBox="0 270 300 150"
     role="img"
     aria-label="Atila.io logo"
@@ -48,3 +51,5 @@ export const AtilaIO = () => (
     </g>
   </svg>
 )
+
+// export const AtilaIO = () => <p>hello</p>;

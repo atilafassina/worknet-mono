@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-5xl;
+  }
+
+  b,
+  strong {
+    @apply text-2xl mb-2 inline-block;
+  }
+
+  a {
+    @apply font-mono;
+  }
+
+  a:hover {
+    @apply underline;
+  }
+
+  a:focus {
+    @apply outline-white;
+  }
+
+  body {
+    @apply bg-black min-h-screen text-white leading-6;
+  }
+}
+
+.double-flow {
+  grid-template-rows: 1fr auto;
+  @apply grid min-h-screen;
+}
+
+.special-item::before {
+  content: attr(data-bullet);
+  @apply inline-block pr-4 py-2;
+}

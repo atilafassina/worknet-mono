@@ -1,4 +1,5 @@
 const { withSentryConfig } = require('@sentry/nextjs')
+const { SOCIAL_URL } = process.env
 
 const securityHeaders = [
   {
@@ -39,6 +40,7 @@ const nextConfig = {
   outputFileTracing: false,
   experimental: {
     urlImports: ['https://cdn.skypack.dev/'],
+    externalDir: true,
   },
   i18n: {
     locales: ['en'],
@@ -56,6 +58,22 @@ const nextConfig = {
       {
         source: '/(.*)',
         headers: securityHeaders,
+      },
+    ]
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/api/auth/:path*',
+        destination: `${SOCIAL_URL}/api/auth:path*`,
+      },
+      {
+        source: '/login',
+        destination: SOCIAL_URL,
+      },
+      {
+        source: '/login/:path*',
+        destination: `${SOCIAL_URL}/:path*`,
       },
     ]
   },

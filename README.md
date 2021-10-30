@@ -4,6 +4,6 @@
 
 | dependency | version |
 | ---------- | ------- |
-| Next.js    | 11+     |
+| Next.js    | 12+     |
 | React      | 17+     |
 | TypeScript | 4.3+    |
