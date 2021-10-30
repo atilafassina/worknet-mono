@@ -29,7 +29,7 @@
 module.exports = {
   reactStrictMode: true,
   outputFileTracing: false,
-  basePath: '/getting-started',
+  basePath: '/get-started',
   experimental: {
     // urlImports: ['https://cdn.skypack.dev/'],
     externalDir: true,
