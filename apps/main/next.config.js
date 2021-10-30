@@ -39,7 +39,6 @@ const nextConfig = {
   reactStrictMode: true,
   outputFileTracing: false,
   experimental: {
-    urlImports: ['https://cdn.skypack.dev/'],
     externalDir: true,
   },
   i18n: {
