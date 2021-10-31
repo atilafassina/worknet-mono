@@ -31,7 +31,6 @@ module.exports = {
   outputFileTracing: false,
   basePath: '/get-started',
   experimental: {
-    // urlImports: ['https://cdn.skypack.dev/'],
     externalDir: true,
   },
   i18n: {
@@ -41,16 +40,4 @@ module.exports = {
   images: {
     domains: ['avatars.githubusercontent.com'],
   },
-  // async headers() {
-  //   return [
-  //     {
-  //       source: '/',
-  //       headers: securityHeaders,
-  //     },
-  //     {
-  //       source: '/(.*)',
-  //       headers: securityHeaders,
-  //     },
-  //   ]
-  // },
 }
