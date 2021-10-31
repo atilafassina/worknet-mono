@@ -40,4 +40,15 @@ module.exports = {
   images: {
     domains: ['avatars.githubusercontent.com'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/get-started',
+        permanent: true,
+        locale: false,
+        basePath: false,
+      },
+    ]
+  },
 }
