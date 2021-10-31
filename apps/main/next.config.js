@@ -64,7 +64,7 @@ const nextConfig = {
     return [
       {
         source: '/api/auth/:path*',
-        destination: `${SOCIAL_URL}/api/auth:path*`,
+        destination: `${SOCIAL_URL}/api/auth/:path*`,
       },
       {
         source: '/get-started',
