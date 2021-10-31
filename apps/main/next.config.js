@@ -63,11 +63,6 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/api/auth/:path*',
-        destination: `${SOCIAL_URL}/api/auth/:path*`,
-        basePath: false,
-      },
-      {
         source: '/get-started',
         destination: SOCIAL_URL,
       },
