@@ -4,7 +4,7 @@ import { SessionProvider } from 'next-auth/react'
 
 const AuthLayout: FC = ({ children }) => {
   return (
-    <SessionProvider>
+    <SessionProvider basePath="/get-started/api/auth">
       <DefaultLayout>{children}</DefaultLayout>
     </SessionProvider>
   )
