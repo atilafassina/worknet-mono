@@ -38,9 +38,6 @@ const SentryWebpackPluginOptions = {
 const nextConfig = {
   reactStrictMode: true,
   outputFileTracing: false,
-  experimental: {
-    externalDir: true,
-  },
   i18n: {
     locales: ['en'],
     defaultLocale: 'en',

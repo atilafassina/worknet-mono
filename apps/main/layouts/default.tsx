@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 import Head from 'next/head'
-import Footer from '@shared/components/footer'
+import Footer from '@components/footer'
 
 const DefaultLayout: FC = ({ children }) => {
   return (

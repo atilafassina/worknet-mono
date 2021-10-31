@@ -30,9 +30,6 @@ module.exports = {
   reactStrictMode: true,
   outputFileTracing: false,
   basePath: '/get-started',
-  experimental: {
-    externalDir: true,
-  },
   i18n: {
     locales: ['en'],
     defaultLocale: 'en',
