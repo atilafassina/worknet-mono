@@ -28,7 +28,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  outputFileTracing: false,
+  // outputFileTracing: false,
   basePath: '/get-started',
   i18n: {
     locales: ['en'],
