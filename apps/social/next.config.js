@@ -28,12 +28,12 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  // outputFileTracing: false,
+  outputFileTracing: false,
   basePath: '/get-started',
-  // i18n: {
-  //   locales: ['en'],
-  //   defaultLocale: 'en',
-  // },
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
   images: {
     domains: ['avatars.githubusercontent.com'],
   },
