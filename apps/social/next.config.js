@@ -28,7 +28,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  // outputFileTracing: false,
+  outputFileTracing: false,
   basePath: '/get-started',
   // i18n: {
   //   locales: ['en'],
@@ -37,15 +37,15 @@ module.exports = {
   images: {
     domains: ['avatars.githubusercontent.com'],
   },
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/',
-  //       destination: '/get-started',
-  //       permanent: true,
-  //       locale: false,
-  //       basePath: false,
-  //     },
-  //   ]
-  // },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/get-started',
+        permanent: true,
+        locale: false,
+        basePath: false,
+      },
+    ]
+  },
 }
